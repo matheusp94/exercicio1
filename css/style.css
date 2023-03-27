@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    background-color: green;
+}
+
+p {
+    background-color: pink;
+}
+
+a {
+    color: purple;
+    font-weight: bold;
+    font-style: italic;
+}
+
+a:hover {
+    color: hotpink;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+#idNome {
+    color: cyan;
+}
+
+.colorido {
+    color: orangered;
+    font-size: 30px;
+}
