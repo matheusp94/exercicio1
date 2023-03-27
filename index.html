@@ -1,53 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>CONTATO</title>
 </head>
+
 <body>
-    <div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="mobile.html">MOBILE</a>
-                </li>
-                <li>
-                    <a href="games.html">GAMES</a>
-                </li>
-                <li>
-                    <a href="tabelas.html">TABELAS</a>
-                </li>
-                <li>
-                    <a href="contato.html">CONTATO</a>
-                </li>
-            </ul>
-        </nav>
+    <header>
+        <h1>CONTATO</h1>
+    </header>
+    <section>
+        <form name="contato" action="index.html" method="get">
+            <p>* campos obrigatórios</p>
 
-        <header>
-            <h1>Home</h1>
-            <p>Página inicial do meu projeto</p>
-        </header> 
+            <fieldset>
+                <legend>Dados Pessoais</legend>
 
-        <section>
-            <h2>Sobre o projeto</h2>
-            <p>Esporte é toda atividade física competitiva com regras e objetivos bem definidos.</p>
-        </section>
-        <section>
-            <h2>Itens importantes</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis explicabo enim quis molestias temporibus. Officia accusantium quibusdam deserunt ipsa assumenda laboriosam expedita rem, modi voluptatem possimus tempora, veniam excepturi aliquam.
-            </p>
-        </section>
+                <label for="idNome">* Nome: </label> <br>
+                <input type="text" name="nome" id="idNome" required autofocus value="Dan"> <br>
 
-        <footer>
-            <p>
-                Autores: Julianny, Matheus. 2023
-            </p>
-        </footer>
+                <label for="idEmail">Email: </label> <br>
+                <input type="email" name="email" id="idEmail" placeholder="nome@email"> <br>
+
+                Telefone: <br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}"
+                    placeholder="99-99999-9999"> <br>
+
+                Data de Nascimento: <br>
+                <input type="date" name="data" id="idData">
+                <input type="time" name="hora" id="idHORA">
+                <input type="week" name="" id="">
+                <input type="datetime-local" name="" id="">
+                <br>
 
 
-    </div>
+                Cidade: <br>
+
+                <select name="cidade" id="idCidade">
+                    <optgroup label="Sudeste">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="PA">Porto Alegre</option>
+                    </optgroup>
+
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Segurança</legend>
+
+                <label for="idSenha">Senha: </label> <br>
+                <input type="password" name="senha" id="idSenha" minlength="8" maxlength="12"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Outros Campos</legend>
+
+                Busca:
+                <input type="search" name="busca" id="idBusca"> <br>
+
+                Url:
+                <input type="url" name="url" id="idUrl" placeholder="http://site"> <br>
+
+                Número:
+                <input type="number" name="numero" id="idNumero" min="2" max="10" step="2"> <br>
+
+                Range:
+                <input type="range" name="range" id="idRange" min="0" max="10"> <br>
+
+                Arquivo:
+                <input type="file" name="arquivo" id="idArquivo">
+
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Tamanhos</legend>
+
+                <input type="radio" name="tamanho" id="idP" value="P"> P
+                <input type="radio" name="tamanho" id="idM" value="M"> M
+                <input type="radio" name="tamanho" id="idG" value="G"> G
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Cores</legend>
+
+                <input type="checkbox" name="cor" id="idVermelho" value="Vermelho"> Vermelho
+                <input type="checkbox" name="cor" id="idAzul" value="Azul"> Azul
+                <input type="checkbox" name="cor" id="idVerde" value="Verde"> Verde
+            </fieldset>
+
+            <fieldset>
+                <legend>Mensagem</legend>
+
+                <textarea name="Mensagem" id="idMensagem" cols="50" rows="5"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+            <input type="button" value="Teste">
+            <input type="reset">
+        </form>
+    </section>
 </body>
+
 </html>
